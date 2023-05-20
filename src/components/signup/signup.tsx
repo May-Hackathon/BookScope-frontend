@@ -14,7 +14,7 @@ const SignUp: React.FC = () => {
         boxSizing: 'border-box',
         position: 'absolute',
         width: '600px',
-        height: '600px',
+        height: '650px',
         left: '420px',
         top: '300px',
         background: 'rgba(205, 201, 195, 0.8)',
@@ -22,19 +22,44 @@ const SignUp: React.FC = () => {
         borderRadius: '60px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'space-between', // 等間隔に配置するために変更
         alignItems: 'center',
+        padding: '30px', // 要素間の余白を調整するために追加
+    }
+    const textStyle: React.CSSProperties = {
+        background: '#D9E4DD',
+        borderRadius: '20px',
+        width: '400px',
+        height: '100px',
+        marginBottom: '70px', // より狭い間隔にするために追加
+    }
+    const fontStyle: React.CSSProperties = {
+        fontFamily: 'Inter',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        fontSize: '24px',
+        lineHeight: '39px',
+        color: '#000',
+        width: '209.17px',
+        height: '51.77px',
+        marginTop: '20px', // name の上に余白を作るために追加
+    }
+    const buttonStyle: React.CSSProperties = {
+        width: '235px',
+        height: '75px',
+        background: '#8FBB9F',
+        borderRadius: '20px'
     }
     return (
         <div style={containerStyle}>
             <div style={boxStyle}>
-                <div>Name</div>
-                <input type="text" />
-                <div>Password</div>
-                <input type="text" />
-                <div>Password(again)</div>
-                <input type="text" />
-                <button>Sign up</button>
+                <div style={fontStyle}>Name</div>
+                <input type="text" style={textStyle} />
+                <div style={fontStyle}>Password</div>
+                <input type="text" style={textStyle} />
+                <div style={fontStyle}>Password(again)</div>
+                <input type="text" style={textStyle} />
+                <button style={buttonStyle}>Sign up</button>
             </div>
         </div>
     );
