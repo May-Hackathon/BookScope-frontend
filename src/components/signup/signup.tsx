@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SignUp: React.FC = () => {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordAgain, setPasswordAgain] = useState('');
+
+    const handleSignUp = () => {
+        // ユーザーが入力した情報をバックエンドに送信する処理を追加
+        console.log('Name:', name);
+        console.log('Password:', password);
+        console.log('Password (again):', passwordAgain);
+        // ここにバックエンドとの通信や処理を追加する
+    };
     const containerStyle: React.CSSProperties = {
         display: 'flex',
         justifyContent: 'center',
@@ -54,12 +65,12 @@ const SignUp: React.FC = () => {
         <div style={containerStyle}>
             <div style={boxStyle}>
                 <div style={fontStyle}>Name</div>
-                <input type="text" style={textStyle} />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} style={textStyle} />
                 <div style={fontStyle}>Password</div>
-                <input type="text" style={textStyle} />
-                <div style={fontStyle}>Password(again)</div>
-                <input type="text" style={textStyle} />
-                <button style={buttonStyle}>Sign up</button>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={textStyle} />
+                <div style={fontStyle}>Password (again)</div>
+                <input type="password" value={passwordAgain} onChange={(e) => setPasswordAgain(e.target.value)} style={textStyle} />
+                <button onClick={handleSignUp} style={buttonStyle}>Sign up</button>
             </div>
         </div>
     );

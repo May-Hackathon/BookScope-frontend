@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const SignIn: React.FC = () => {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = () => {
+        // ユーザーが入力したメールアドレスとパスワードをバックエンドに送信する処理を追加
+        console.log('Name:', name);
+        console.log('Password:', password);
+        // ここにバックエンドとの通信や認証処理を追加する
+    };
     const containerStyle: React.CSSProperties = {
         display: 'flex',
         justifyContent: 'center',
@@ -54,10 +63,10 @@ const SignIn: React.FC = () => {
         <div style={containerStyle}>
             <div style={boxStyle}>
                 <div style={fontStyle}>Name</div>
-                <input type="text" style={textStyle} />
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} style={textStyle} />
                 <div style={fontStyle}>Password</div>
-                <input type="text" style={textStyle} />
-                <button style={buttonStyle}>Sign in</button>
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={textStyle} />
+                <button onClick={handleLogin} style={buttonStyle}>Sign in</button>
             </div>
         </div>
     );
