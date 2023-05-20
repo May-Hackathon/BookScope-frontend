@@ -1,0 +1,15 @@
+.button{
+  border-radius: 8px;
+  min-width: 100px;
+  color: white;
+  padding: 8px 0;
+  &.primary{
+    background: #8fbb9f;
+    border: none;
+  }
+  &.secondly{
+    background: #555555;
+    border: solid 1px #D9E4DD;
+  }
+}
+

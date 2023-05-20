@@ -1,0 +1,38 @@
+.wrapper{
+  display: flex;
+  gap: 4px;
+  background: white;
+  border: solid 1px #D9E4DD;
+  padding: 4px;
+  border-radius: 4px;
+  .tag{
+    background: white;
+    border-radius: 4px;
+    border: solid 1px black;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    .delete{
+      width: 16px;
+      height: 16px;
+      border: none;
+      .icon{
+        width: 16px;
+        height: 16px;
+        &:hover{
+          fill: red;
+        }
+      }
+    }
+  }
+
+  .input{
+    border: none;
+    height: 20px;
+    flex: 1;
+    &:focus{
+      outline: none;
+    }
+  }
+}
