@@ -16,7 +16,17 @@
   .bio{
     font-size: 14px;
   }
-  .link{
-    color: white;
+  .linkWrapper{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    .linkIcon{
+      width: 16px;
+      height: 16px;
+      fill: white;
+    }
+    .link{
+      color: white;
+    }
   }
 }
