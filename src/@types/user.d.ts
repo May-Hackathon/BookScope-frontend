@@ -4,4 +4,7 @@ export type User = {
   icon: string;
   bio: string;
   links: string[];
+  school: string;
+  major: string;
+  grade: string;
 }

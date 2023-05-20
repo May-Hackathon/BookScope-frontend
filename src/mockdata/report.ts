@@ -1,8 +1,28 @@
 import {Report} from "@/@types/report";
 import {User} from "@/@types/user";
 import {Book} from "@/@types/book";
+import {Heatmap} from "@/@types/heatmap";
+import {Activity} from "@/@types/activity";
 
-const mockUser:User = {name: "username",id: 0,icon: "https://avatars.githubusercontent.com/u/96982836?v=4", bio:"test-bio", links:["test"]};
+const mockUser:User = {name: "username",id: 0,icon: "https://avatars.githubusercontent.com/u/96982836?v=4", bio:"test-bio", links:["test"],school: "test",major:"hoge",grade: "huga"};
 const mockBook: Book = {id:1,tags:[],title:"本のタイトル",author:"著者",isbn:"9784422311074"}
 const mockReport:Report = {book: mockBook,tags: ["テスト1","テスト2","テスト3","テスト4","テストあああああああああ5",],title:"感想文タイトル",content: "吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。どうも咽せぽくて実に弱った。これが人間の飲む煙草というものである事はようやくこの頃知った。吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わ", id: 0, user: mockUser};
-export {mockUser,mockBook,mockReport}
+const mockHeatmap: Heatmap = [
+  {date:"2023-01-01",count: 0},
+  {date:"2023-01-02",count: 2},
+  {date:"2023-01-03",count: 0},
+  {date:"2023-01-04",count: 1},
+  {date:"2023-01-05",count: 3},
+  {date:"2023-01-06",count: 5},
+  {date:"2023-01-07",count: 4},
+  {date:"2023-01-08",count: 0},
+  {date:"2023-01-09",count: 4},
+  {date:"2023-01-10",count: 2},
+]
+const mockActivity: Activity = [
+  {month:"2023-01",item:["テスト1","テスト2","テスト3","テスト4","テスト5"]},
+  {month:"2023-02",item:["テスト1","テスト2","テスト3","テスト4","テスト5"]},
+  {month:"2023-03",item:["テスト1","テスト2","テスト3","テスト4","テスト5"]},
+]
+
+export {mockUser,mockBook,mockReport,mockHeatmap,mockActivity}

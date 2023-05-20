@@ -1,0 +1,1 @@
+export type Heatmap = {date: string,count: number}[]
