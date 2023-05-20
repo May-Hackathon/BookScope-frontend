@@ -2,7 +2,7 @@ import type {Book} from "@/@types/book";
 import type {User} from "@/@types/user";
 
 export type Report = {
-  id: string;
+  id: number;
   book: Book;
   user: User;
   title: string;
