@@ -5,4 +5,16 @@
   .header{
     padding: 0 32px;
   }
+  .container{
+    position: relative;
+    .edit{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      .editIcon{
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
