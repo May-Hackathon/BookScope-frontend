@@ -1,26 +1,36 @@
 .wrapper{
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
-  background: white;
-  border: solid 1px #D9E4DD;
+  border: solid 1px white;
   padding: 4px;
   border-radius: 4px;
+  background: none;
   .tag{
-    background: white;
+    background: #222;
+    color: white;
     border-radius: 4px;
-    border: solid 1px black;
-    padding: 0 4px;
+    border: solid 1px #555;
     display: flex;
     align-items: center;
-    height: 20px;
+    height: 31px;
+    overflow: hidden;
+    .content{
+      padding: 4px 4px;
+    }
     .delete{
       width: 16px;
-      height: 16px;
+      height: 100%;
       border: none;
       .icon{
+        fill: white;
         width: 16px;
-        height: 16px;
-        &:hover{
+        height: 100%;
+        object-fit: contain;
+      }
+      &:hover{
+        background: #552222;
+        .icon{
           fill: red;
         }
       }
@@ -29,8 +39,10 @@
 
   .input{
     border: none;
-    height: 20px;
+    background: none;
     flex: 1;
+    height: 31px;
+    color: white;
     &:focus{
       outline: none;
     }

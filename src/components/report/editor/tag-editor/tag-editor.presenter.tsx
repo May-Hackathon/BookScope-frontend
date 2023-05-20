@@ -4,7 +4,7 @@ import {Delete} from "@/assets/delete";
 
 const Tag = ({tag,onClick}: {tag: string,onClick: () =>void}) => {
   return <div className={Styles.tag}>
-    <span>{tag}</span>
+    <span className={Styles.content}>{tag}</span>
     <div onClick={onClick} className={Styles.delete}><Delete className={Styles.icon}/></div>
   </div>
 }
