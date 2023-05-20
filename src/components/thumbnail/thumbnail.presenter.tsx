@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import {Book} from "@/@types/book";
 import Styles from "./thumbnail.module.scss";
-import {Pin} from "@/assets/pin";
+import {PinIcon} from "@/assets/pin";
 
 type props = {
   book: Book;
@@ -16,7 +16,7 @@ const Thumbnail = ({book,pinned}: props) => {
     <div className={Styles.meta}>
       <h2 className={Styles.title}>{book.title}</h2>
       <div>{book.author}</div>
-      <Pin className={Styles.pin} fill={pinned?"#8FBB9F":"white"}/>
+      <PinIcon className={Styles.pin} fill={pinned?"#8FBB9F":"white"}/>
     </div>
   </div>
 }
