@@ -2,7 +2,7 @@ import Styles from "./editor.module.scss";
 import {Report} from "@/@types/report";
 import {Textarea} from "@/components/report/textarea/textarea.presenter";
 import {useState} from "react";
-import {PrimaryButton, SecondlyButton} from "@/components/buttons/buttons";
+import {PrimaryButton, SecondlyButton} from "@/components/buttons";
 import {TagEditor} from "@/components/report/editor/tag-editor/tag-editor.presenter";
 
 
