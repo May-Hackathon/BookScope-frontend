@@ -1,0 +1,42 @@
+.tag {
+  border: #8FBB9F solid 1px;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 64px;
+}
+
+.wrapper{
+  &.vertical{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    .container{
+      .title{
+        text-align: center;
+      }
+    }
+  }
+  &.horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    .container{
+      gap: 16px;
+    }
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    .title{
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .tags{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+  }
+}
