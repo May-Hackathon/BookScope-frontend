@@ -14,6 +14,6 @@ export default meta
 export const Default: Story = {
   render: () => <Thumbnail book={{id:1,tags:[],title:"本のタイトル",author:"著者",isbn:"9784422311074"}}/>
 }
-export const PinIconned: Story = {
+export const Pinned: Story = {
   render: () => <Thumbnail book={{id:1,tags:[],title:"本のタイトル",author:"著者",isbn:"9784422311074"}} pinned/>
 }
