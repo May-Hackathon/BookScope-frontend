@@ -20,7 +20,7 @@ const signInStyle: React.CSSProperties = {
     fontFamily: 'Inter',
     fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: '32px',
+    fontSize: '24px',
     lineHeight: '39px',
     color: '#000'
 }
@@ -33,7 +33,7 @@ const signUpStyle: React.CSSProperties = {
     fontFamily: 'Inter',
     fontStyle: 'normal',
     fontWeight: '400',
-    fontSize: '32px',
+    fontSize: '24px',
     lineHeight: '39px',
     color: '#000',
 }
