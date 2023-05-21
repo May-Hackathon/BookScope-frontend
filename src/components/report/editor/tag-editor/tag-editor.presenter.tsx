@@ -18,7 +18,9 @@ const TagEditor  =({tags,onChange}: props) => {
   const [input,setInput] = useState("");
   
   const onKeyDown = (e:KeyboardEvent<HTMLInputElement>) => {
-    if (e.code==="Enter"&&!tags.includes(input)){
+    console.log(e.nativeEvent.isComposing )
+    //@ts-ignore
+    if (e.code==="Enter"&&!tags.includes(input)&&!e.nativeEvent.isComposing){
       e.preventDefault();
       onChange([...tags,input]);
       setInput("");
