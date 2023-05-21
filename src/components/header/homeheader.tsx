@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState,MouseEvent} from 'react';
+import {mockUser} from "@/mockdata/report";
 
 const HomeHeader = () => {
 const headerStyle: React.CSSProperties = {
     background: 'rgba(85, 85, 85, 0.8)',
-    borderBottom: '5px solid #D9E4DD',
     borderRadius: '0px',
     position: 'sticky',
     top: '0',
     zIndex: '999',
-    height: '100px',
+    height: '60px',
     width: '100%',
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: '0 20px',
+    marginBottom: "20px",
 };
 const buttonStyle: React.CSSProperties = {
     background: 'none',
@@ -23,29 +24,39 @@ const buttonStyle: React.CSSProperties = {
     height: '130px',
     cursor: 'pointer',
     marginRight: '10px',
+    color: "white"
 };
 const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-const handleMenuToggle = () => {
+    
+    useEffect(()=>{
+        const onClickHandler = () => {
+            setIsMenuOpen(false);
+        }
+        window.addEventListener("click",onClickHandler);
+        return ()=>{
+            window.removeEventListener("click",onClickHandler);
+        }
+    },[]);
+const handleMenuToggle = (e:MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
     setIsMenuOpen(!isMenuOpen);
 };
 
 const menuStyle: React.CSSProperties = {
     position: 'absolute',
-    top: '100px',
+    top: '60px',
     right: '20px',
     width: '200px',
-    height: '300px',
     background: 'rgba(85, 85, 85, 0.8)',
     border: '1px solid #D9E4DD',
-    borderRadius: '60px',
+    borderRadius: '20px',
     padding: '10px',
     display: isMenuOpen ? 'block' : 'none',
 };
 
 const menuItemStyle: React.CSSProperties = {
-    marginBottom: '30px',
-    marginTop: '30px'
+    padding: '10px 0',
+    color: "white"
 };
 return (
     <header style={headerStyle}>
@@ -54,8 +65,8 @@ return (
         ☰
         </button>
         {isMenuOpen && (
-        <div style={menuStyle}>
-            <div style={menuItemStyle}>Signed in as</div>
+        <div style={menuStyle} onClick={(e)=>e.stopPropagation()}>
+            <div style={menuItemStyle}>Signed in as {mockUser.name}</div>
             <div style={menuItemStyle}>Your profile</div>
             <div style={menuItemStyle}>Your bookshelf</div>
             <div style={menuItemStyle}>Your grades</div>
