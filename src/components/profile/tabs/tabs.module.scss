@@ -1,0 +1,34 @@
+.wrapper{
+  display: flex;
+  gap: 16px;
+  border-bottom: solid 1px #D9E4DD;
+  .tab{
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 0 8px 8px;
+    .icon{
+      fill: white;
+      width: 24px;
+      height: 24px;
+    }
+    .text{
+      line-height: 24px;
+    }
+    &.active{
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 2px;
+        transform: translateY(50%);
+        background-color: #8FBB9F;
+      }
+    }
+  }
+}
