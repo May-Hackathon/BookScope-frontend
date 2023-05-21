@@ -26,7 +26,9 @@ const Overview = ({userProfile,pinned,heatmap,activity}:props) => {
       </div>
       <div>
         <span>Heatmap</span>
-        <CalendarHeatmap values={heatmap}/>
+        <div className={Styles.heatmap}>
+          <CalendarHeatmap values={heatmap}/>
+        </div>
       </div>
       <div>
         <span>Activity</span>

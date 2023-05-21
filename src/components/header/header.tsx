@@ -9,7 +9,8 @@ const headerStyle: React.CSSProperties = {
     top: '0',
     zIndex: '999',
     height: '100px',
-    width: '100%'
+    width: '100%',
+    marginBottom: "20px"
 };
 const signInStyle: React.CSSProperties = {
     position: 'absolute',

@@ -17,7 +17,7 @@ const ReportViewer = ({report}: props) => {
       </div>
       <div className={Styles.container}>
         <Textarea content={report.content} readonly/>
-        {report.isMyPost&&<Link href={""} className={Styles.edit}><EditIcon className={Styles.editIcon} fill={"white"}/></Link>}
+        {report.isMyPost&&<Link href={`${location.pathname}?edit=1`} className={Styles.edit}><EditIcon className={Styles.editIcon} fill={"white"}/></Link>}
       </div>
     </div>
   )
