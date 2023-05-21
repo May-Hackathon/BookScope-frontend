@@ -1,5 +1,6 @@
 import React, {useEffect, useState,MouseEvent} from 'react';
 import {mockUser} from "@/mockdata/report";
+import Link from "next/link";
 
 const HomeHeader = () => {
 const headerStyle: React.CSSProperties = {
@@ -65,8 +66,9 @@ return (
         ☰
         </button>
         {isMenuOpen && (
-        <div style={menuStyle} onClick={(e)=>e.stopPropagation()}>
+        <div style={menuStyle}>
             <div style={menuItemStyle}>Signed in as {mockUser.name}</div>
+            <div style={menuItemStyle}><Link href={"/scan"} style={{textDecoration:"none",color:"white"}} >Scan Book</Link></div>
             <div style={menuItemStyle}>Your profile</div>
             <div style={menuItemStyle}>Your bookshelf</div>
             <div style={menuItemStyle}>Your grades</div>
